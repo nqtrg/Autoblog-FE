@@ -15,10 +15,6 @@ const User = props => (
 
 export default () => (
   <Container>
-      <Link to="/">Home</Link>
-        <Link to="/contact">Contact</Link>
-        <Link to="/about">About</Link>
-        <Link to="/about-css-modules">About-CSS</Link>
     <h1>About CSS Modules</h1>
     <p>CSS Modules are cool</p>
     <User
