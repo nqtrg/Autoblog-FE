@@ -6,7 +6,7 @@ export default () => (
   <Container>
     <div style={{ color: `purple` }}>
       <Header headerText="Home" />
-      <p>Great Gatsby</p>
+      <p>Coming soon</p>
     </div>
   </Container>
 )
