@@ -5,6 +5,10 @@
  */
 
 module.exports = {
+  siteMetadata: {
+    title: `nqtrg.dev`,
+    aboutTitleDefault: `About`,
+  },
   plugins: [
     {
       resolve: `gatsby-plugin-typography`,
