@@ -7,3 +7,12 @@
 <h1 align="center">
   Autoblog FE
 </h1>
+
+## Setup
+
+### Generate a github token and put it into `./data.json`
+```json
+{
+    "github_token" : "token this_is_your_github_token"
+}
+```
