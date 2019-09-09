@@ -11,6 +11,14 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: "gatsby-source-graphql",
+      options: {
+        typeName: "RMAPI",
+        fieldName: "rickAndMorty",
+        url: "https://rickandmortyapi-gql.now.sh/",
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `src`,
