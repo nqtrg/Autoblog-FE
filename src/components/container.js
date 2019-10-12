@@ -20,19 +20,22 @@ export default ({ children }) => {
     `
   )
 
-  return(<div className={containerStyles.container}>
-    <Link to="/" className={containerStyles.siteTitle}>
-      <h3 style={{ display: `inline` }}>{data.site.siteMetadata.title}</h3>
-    </Link>
+  return (
+    <div className={containerStyles.container}>
+      <Link to="/" className={containerStyles.siteTitle}>
+        <h3 style={{ display: `inline` }}>{data.site.siteMetadata.title}</h3>
+      </Link>
 
-    <ul style={{ listStyle: `none`, float: `right` }}>
-      <ListLink to="/">Home</ListLink>
-      <ListLink to="/about">About</ListLink>
-      <ListLink to="/about-css-modules">About-CSS</ListLink>
-    </ul>
-    {children}
-    <footer>
-      (c) Quang-Ngu Truong 2019
+      <ul style={{ listStyle: `none`, float: `right` }}>
+        <ListLink to="/">Home</ListLink>
+        <ListLink to="/github">Github</ListLink>
+        <ListLink to="/about">About</ListLink>
+        <ListLink to="/about-css-modules">About-CSS</ListLink>
+      </ul>
+      {children}
+      <footer>
+        (c) Quang-Ngu Truong 2019
     </footer>
-  </div>)
+    </div>
+  )
 }

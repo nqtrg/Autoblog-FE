@@ -1,7 +1,8 @@
-import React, { Component } from "react"
-import axios from "axios"
-
 import { github_token } from "../../data.json"
+import axios from "axios"
+import Container from "../components/container"
+import Header from "../components/header"
+import React, { Component } from "react"
 class Github extends Component {
     state = {
         loading: false,
@@ -15,50 +16,47 @@ class Github extends Component {
     }
     render() {
         const reps = this.state.repos
-        // console.log('----------------')
-        // console.log('REPS: ', reps)
-        // console.log('THIS.REPS: ', this.state.repos)
-        // console.log('THIS.REPS NODES: ', this.state.repos.nodes)
-        // console.log('REPS LENGTH: ', reps.length)
-        // console.log('REPS NODES: ', reps.nodes)
-
         return (
-            <div>
+            <Container>
+                <Header headerText={
+                    'Github'} />
                 <div>
-                    {this.state.loading ? (
-                        <p>Please hold, repos incoming!</p>
-                    ) : reps.nodes ? (
-                        <>
-                            <div>
-                                <h1>My Site's Files</h1>
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th>Name</th>
-                                            <th>Url</th>
-                                            <th>Description</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        {reps.nodes.map(function (node, index) {
-                                            return <tr key={index}>
-                                                <td>{node.name}</td>
-                                                <td>{node.url}</td>
-                                                <td>{node.description}</td>
+                    <div>
+                        {this.state.loading ? (
+                            <p>Please hold, repos incoming!</p>
+                        ) : reps.nodes ? (
+                            <>
+                                <div>
+                                    <h1>My Site's Files</h1>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Url</th>
+                                                <th>Description</th>
                                             </tr>
-                                        })}
-                                    </tbody>
-                                </table>
-                            </div>
+                                        </thead>
+                                        <tbody>
+                                            {reps.nodes.map(function (node, index) {
+                                                return <tr key={index}>
+                                                    <td>{node.name}</td>
+                                                    <td>{node.url}</td>
+                                                    <td>{node.description}</td>
+                                                </tr>
+                                            })}
+                                        </tbody>
+                                    </table>
+                                </div>
 
-                        </>
-                    ) : (
-                                <p>[E0001] {this.state.error}</p>
+                            </>
+                        ) : (
+                                    <p>[E0001] {this.state.error}</p>
 
-                            )
-                    }
+                                )
+                        }
+                    </div>
                 </div>
-            </div>
+            </Container>
         )
     }
     // This data is fetched at run time on the client.
