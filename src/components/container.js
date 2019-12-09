@@ -31,6 +31,7 @@ export default ({ children }) => {
         <ListLink to="/github">Github</ListLink>
         <ListLink to="/about">About</ListLink>
         <ListLink to="/about-css-modules">About-CSS</ListLink>
+        <ListLink to="/article">Article</ListLink>
       </ul>
       {children}
       <footer>
